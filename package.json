@@ -1,0 +1,8 @@
+{
+  "name": "happo-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:trotzig/happo-demo.git",
+  "author": "Henric Trotzig <henric.trotzig@brigade.com>",
+  "license": "MIT"
+}
