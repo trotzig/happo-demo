@@ -7,10 +7,11 @@
   "license": "MIT",
   "scripts": {
     "webpack": "webpack src/happo.js build/happo.js",
-    "webpack:watch": "webpack src/happo.js build/happo.js",
-    "test": "exit 0"
+    "webpack:watch": "webpack --watch src/happo.js build/happo.js",
+    "happo": "happo"
   },
   "dependencies": {
+    "happo": "3.0.0-beta.10",
     "webpack": "^1.13.3"
   }
 }

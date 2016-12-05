@@ -1,7 +1,14 @@
 sudo: false
 language: node_js
+addons:
+  firefox: "47.0"
 node_js:
   - "6"
-before_script:
-  - npm run webpack
+notifications:
+  email:
+    recipients:
+      - henric.trotzig@brigade.com
+    on_success: always
 
+script:
+  - sh happo-ci.sh
