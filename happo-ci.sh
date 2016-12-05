@@ -24,3 +24,7 @@ run_happo_ci "HEAD"
 
 URL_TO_DIFFS=$(npm run --silent happo upload)
 echo "URL to diffs: $URL_TO_DIFFS"
+
+if [ -n "$URL_TO_DIFFS" ]; then
+  node postCommentOnCommit.js "$URL_TO_DIFFS"
+fi
