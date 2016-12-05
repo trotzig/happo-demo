@@ -14,7 +14,7 @@ run_happo_ci() {
 
   # Run Happo for the current commit. We use `xvfb-run` so that we can run
   # Happo (which uses Firefox) in a headless display environment.
-  xvfb-run -a npm run --silent happo
+  xvfb-run npm run --silent happo run
 }
 
 # Check out the previous version and generate baseline snapshots
