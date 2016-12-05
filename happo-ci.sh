@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Exit immediately if we encounter any errors.
-set -ex
-
 run_happo_ci() {
   echo "Checking out $1"
   # Checkout the commit
