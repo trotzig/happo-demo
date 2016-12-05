@@ -11,8 +11,8 @@
     "happo": "happo"
   },
   "dependencies": {
+    "github": "^7.0.0",
     "happo": "3.0.0-beta.10",
-    "octonode": "^0.7.7",
     "webpack": "^1.13.3"
   }
 }

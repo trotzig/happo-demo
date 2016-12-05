@@ -1,25 +1,29 @@
 #!/usr/bin/env node
 
-const github = require('octonode');
+const GithubApi = require('github');
 
 const {
   TRAVIS_COMMIT,
-  TRAVIS_COMMIT_RANGE,
-  TRAVIS_EVENT_TYPE,
   TRAVIS_REPO_SLUG,
+  GHE_TOKEN
 } = process.env;
 
 process.stdout.write(`Commit SHA: ${TRAVIS_COMMIT}\n`);
 
-const client = github.client(process.env.GHE_TOKEN);
+const github = new GithubApi();
+github.authenticate({
+    type: 'token',
+    token: GHE_TOKEN,
+});
 
 const diffURL = process.argv[2];
 
-const repo = octonode.Repository(TRAVIS_REPO_SLUG);
-
-repo.commentOnCommit({
-  body: `:lipstick: [Visual diffs or new examples were found](${diffURL}).`,
-  commit_id: TRAVIS_COMMIT,
+const [owner, repo] = TRAVIS_REPO_SLUG.split('/');
+github.repos.createCommitComment({
+  body: `:lipstick: [Happo diffs or new examples were found](${diffURL}).`,
+  owner,
+  repo,
+  sha: TRAVIS_COMMIT,
 }, (comErr) => {
   if (comErr) {
     process.stderr.write(`Error: ${comErr}\n`);
