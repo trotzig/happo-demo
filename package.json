@@ -5,6 +5,11 @@
   "repository": "git@github.com:trotzig/happo-demo.git",
   "author": "Henric Trotzig <henric.trotzig@brigade.com>",
   "license": "MIT",
+  "scripts": {
+    "webpack": "webpack src/happo.js build/happo.js",
+    "webpack:watch": "webpack src/happo.js build/happo.js",
+    "test": "exit 0"
+  },
   "dependencies": {
     "webpack": "^1.13.3"
   }
