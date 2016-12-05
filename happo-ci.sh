@@ -20,7 +20,7 @@ run_happo_ci "HEAD^"
 
 # Check out the latest version and check for diffs
 echo "Running Happo on latest version..."
-run_happo_ci "HEAD"
+run_happo_ci "$TRAVIS_COMMIT"
 
 URL_TO_DIFFS=$(npm run --silent happo upload)
 echo "URL to diffs: $URL_TO_DIFFS"
