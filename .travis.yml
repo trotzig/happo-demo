@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
 addons:
-  firefox: '47.0'
+  firefox: '47.0.1'
 node_js:
 - '6'
 notifications:
