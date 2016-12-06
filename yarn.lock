@@ -1199,9 +1199,9 @@ graceful-fs@^4.1.2:
   version "1.0.1"
   resolved "https://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-happo@3.0.0-beta.10:
-  version "3.0.0-beta.10"
-  resolved "https://registry.npmjs.org/happo/-/happo-3.0.0-beta.10.tgz#f123598f18cbf7767f9549bdc4376c9ecd6da0e8"
+happo@3.0.0-beta.11:
+  version "3.0.0-beta.11"
+  resolved "https://registry.npmjs.org/happo/-/happo-3.0.0-beta.11.tgz#6f0b3344080a9e04f233478c065204980ad75532"
   dependencies:
     aws-sdk "^2.7.5"
     commander "^2.9.0"
